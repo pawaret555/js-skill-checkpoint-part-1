@@ -17,31 +17,26 @@ const products = [
   },
 ];
 
-const promotionCode = "SALE50";
+const promotionCode = "SALE20";
 // เริ่มเขียนโค้ดตรงนี้              array    โค้ดส่วนลด
 function calculateTotalPrice(products,promotionCode) {
   let total = 0
-  let discount = 0
   for (let i = 0; i < products.length; i++) {
    let sum = products[i].price * products[i].quantity
     total = sum + total
-    if (promotionCode = "SALE50") {
-      discount = total * 0.5;
-    } else if (promotionCode = "SALE20"){
-      discount = total * 0.2;
-    }
-    
   }
-  console.log(total);
-  return discount
-}
+
+    if (promotionCode === "SALE50") {
+      total = total * 0.5;
+    } else if (promotionCode === "SALE20"){
+      total = total * 0.8;
+    }
+    return total;
+  }
   
-console.log(discount);
 
+  
+console.log(calculateTotalPrice(products, promotionCode));
 
-
-calculateTotalPrice(products,promotionCode)
-
-console.log(products)
 
 //เอาจำนวน * ราคา แล้วบวกเข้าด้วยกัน

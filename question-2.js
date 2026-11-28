@@ -12,4 +12,4 @@ let BananaResult = inventory[1].price * inventory[1].quantity
 let OrangeResult = inventory[2].price * inventory[2].quantity
 
 let total = appleResult + BananaResult + OrangeResult
-console.log(total);
+console.log(`มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก ${total} บาท `);
